@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        textAlign: 'center',
+        background: 'black',
+        height: '100vh',
+      }}>
+      <div style={{ paddingTop: '20vh' }}>
+        <div style={{ fontSize: '5vh', fontStyle: 'italic', color: 'gray' }}>*Loud italian noises*</div>
+        <div style={{ fontSize: '7vh', fontWeight: 'bold', color: 'red' }}>&quot;EY PIZZA MAMA&quot;</div>
+        <div style={{ fontSize: '5vh', fontStyle: 'italic', color: 'gray' }}>ETC...</div>
+      </div>
     </div>
   );
 }
-
-export default App;
