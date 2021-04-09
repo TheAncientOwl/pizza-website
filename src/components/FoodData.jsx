@@ -26,6 +26,16 @@ import CookieDoughImg from '../images/desert/cookieDough.jpg';
 import ChocolateTortilla from '../images/desert/chocolateTortilla.jpg';
 import CapsuniFriscaImg from '../images/desert/capsuniFrisca.jpg';
 
+import CocaColaImg from '../images/bauturi/cocaCola.jpg';
+import SpriteImg from '../images/bauturi/sprite.jpg';
+import FantaImg from '../images/bauturi/fanta.jpg';
+import CappyImg from '../images/bauturi/cappy.jpg';
+import FuzeteaImg from '../images/bauturi/fuzetea.jpg';
+import DornaImg from '../images/bauturi/dorna.jpg';
+import UrsusImg from '../images/bauturi/ursus.jpg';
+import TuborgImg from '../images/bauturi/tuborg.jpg';
+import CarlsbergImg from '../images/bauturi/carlsberg.jpg';
+
 const FoodData = [
   {
     categoryName: 'pizza',
@@ -215,6 +225,74 @@ const FoodData = [
         summary: 'Häagen-Dazs căpșuni & frișcă 95ml',
         details: '',
         price: '12.50',
+      },
+    ],
+  },
+  {
+    categoryName: 'băuturi',
+    data: [
+      {
+        img: CocaColaImg,
+        alt: 'bauturi',
+        summary: 'Coca-Cola',
+        details: '',
+        price: '6.50',
+      },
+      {
+        img: SpriteImg,
+        alt: 'bauturi',
+        summary: 'Sprite',
+        details: '',
+        price: '6.50',
+      },
+      {
+        img: FantaImg,
+        alt: 'bauturi',
+        summary: 'Fanta',
+        details: '',
+        price: '6.50',
+      },
+      {
+        img: CappyImg,
+        alt: 'bauturi',
+        summary: 'Cappy nectar portocale 330ml',
+        details: '',
+        price: '6.00',
+      },
+      {
+        img: FuzeteaImg,
+        alt: 'bauturi',
+        summary: 'FUZETEA 500ml',
+        details: '',
+        price: '7.00',
+      },
+      {
+        img: DornaImg,
+        alt: 'bauturi',
+        summary: 'Apă Dorna 500ml',
+        details: '',
+        price: '5.00',
+      },
+      {
+        img: UrsusImg,
+        alt: 'bauturi',
+        summary: 'Bere Ursus 500ml',
+        details: '',
+        price: '6.50',
+      },
+      {
+        img: TuborgImg,
+        alt: 'bauturi',
+        summary: 'Bere Tuborg 500ml',
+        details: '',
+        price: '6.50',
+      },
+      {
+        img: CarlsbergImg,
+        alt: 'bauturi',
+        summary: 'Bere Carlsberg 500ml',
+        details: '',
+        price: '7.00',
       },
     ],
   },
