@@ -21,6 +21,11 @@ import TunaImg from '../images/salate/tuna.jpg';
 import GreceascaImg from '../images/salate/greceasca.jpg';
 import CaesarImg from '../images/salate/caesar.jpg';
 
+import BrownieImg from '../images/desert/brownie.jpg';
+import CookieDoughImg from '../images/desert/cookieDough.jpg';
+import ChocolateTortilla from '../images/desert/chocolateTortilla.jpg';
+import CapsuniFriscaImg from '../images/desert/capsuniFrisca.jpg';
+
 const FoodData = [
   {
     categoryName: 'pizza',
@@ -177,6 +182,39 @@ const FoodData = [
         details:
           'Piept de pui, bacon, Parmezan, roșii Cherry, crutoane, mix de salată endivia, frisée, sfeclă roşie și un sos la alegere.',
         price: '20.50',
+      },
+    ],
+  },
+  {
+    categoryName: 'desert',
+    data: [
+      {
+        img: BrownieImg,
+        alt: 'desert',
+        summary: 'Brownie',
+        details: 'O prăjitură delicioasă cu sos de ciocolată și alune.',
+        price: '14.00',
+      },
+      {
+        img: CookieDoughImg,
+        alt: 'desert',
+        summary: 'Cookie Dough',
+        details: 'Blat crocant și fierbinte cu bucăți de ciocolată.',
+        price: '13.00',
+      },
+      {
+        img: ChocolateTortilla,
+        alt: 'desert',
+        summary: 'Chocolate Tortilla',
+        details: 'Tortilla umplută cu cremă delicioasă de Nutella.',
+        price: '12.00',
+      },
+      {
+        img: CapsuniFriscaImg,
+        alt: 'desert',
+        summary: 'Häagen-Dazs căpșuni & frișcă 95ml',
+        details: '',
+        price: '12.50',
       },
     ],
   },
