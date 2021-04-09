@@ -14,8 +14,12 @@ import ChickenWingsImg from '../images/antreuri/chickenWings.jpg';
 
 import BologneseImg from '../images/paste/bolognese.jpg';
 import CarbonaraImg from '../images/paste/carbonara.jpg';
-import TomatoVeggie from '../images/paste/tomatoVeggie.jpg';
-import ChickenPasta from '../images/paste/chickenPasta.jpg';
+import TomatoVeggieImg from '../images/paste/tomatoVeggie.jpg';
+import ChickenPastaImg from '../images/paste/chickenPasta.jpg';
+
+import TunaImg from '../images/salate/tuna.jpg';
+import GreceascaImg from '../images/salate/greceasca.jpg';
+import CaesarImg from '../images/salate/caesar.jpg';
 
 const FoodData = [
   {
@@ -132,18 +136,47 @@ const FoodData = [
         price: '27.50',
       },
       {
-        img: TomatoVeggie,
+        img: TomatoVeggieImg,
         alt: 'paste',
         summary: 'Penne Tomato Veggie',
         details: 'Penne în sos de roșii, ciuperci, roșii Cherry, Parmezan.',
         price: '27.50',
       },
       {
-        img: ChickenPasta,
+        img: ChickenPastaImg,
         alt: 'paste',
         summary: 'Chicken Pasta',
         details: 'Penne în sos alb de smântână, piept de pui, pesto verde, Parmezan.',
         price: '31.50',
+      },
+    ],
+  },
+  {
+    categoryName: 'salate',
+    data: [
+      {
+        img: TunaImg,
+        alt: 'salata',
+        summary: 'Salată Tuna',
+        details:
+          'Ton, măsline verzi, porumb, ardei capia, ceapă roșie, mix de salată endivia, frisée, sfeclă roşie și un sos la alegere.',
+        price: '19.50',
+      },
+      {
+        img: GreceascaImg,
+        alt: 'salata',
+        summary: 'Salată Grecească',
+        details:
+          'Feta, măsline verzi, roşii Cherry, castraveţi, ceapă roșie, ardei capia, oregano, mix de salată endivia, frisée, sfeclă roşie și un sos la alegere.',
+        price: '19.50',
+      },
+      {
+        img: CaesarImg,
+        alt: 'salata',
+        summary: 'Salată Caesar',
+        details:
+          'Piept de pui, bacon, Parmezan, roșii Cherry, crutoane, mix de salată endivia, frisée, sfeclă roşie și un sos la alegere.',
+        price: '20.50',
       },
     ],
   },
