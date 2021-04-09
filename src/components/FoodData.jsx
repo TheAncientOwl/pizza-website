@@ -12,6 +12,11 @@ import GarlicBreadImg from '../images/antreuri/garlicBread.jpg';
 import QuesadillaImg from '../images/antreuri/quesadilla.jpg';
 import ChickenWingsImg from '../images/antreuri/chickenWings.jpg';
 
+import BologneseImg from '../images/paste/bolognese.jpg';
+import CarbonaraImg from '../images/paste/carbonara.jpg';
+import TomatoVeggie from '../images/paste/tomatoVeggie.jpg';
+import ChickenPasta from '../images/paste/chickenPasta.jpg';
+
 const FoodData = [
   {
     categoryName: 'pizza',
@@ -106,6 +111,39 @@ const FoodData = [
         summary: 'Barbeque Chicken Wings',
         details: 'Aripioare de pui trecute prin sos Barbeque.',
         price: '16.50',
+      },
+    ],
+  },
+  {
+    categoryName: 'paste',
+    data: [
+      {
+        img: BologneseImg,
+        alt: 'paste',
+        summary: 'Penne Bolognese',
+        details: 'Penne în sos ragù, cubulețe cu carne de vită,  Mozzarella.',
+        price: '27.50',
+      },
+      {
+        img: CarbonaraImg,
+        alt: 'paste',
+        summary: 'Carbonara',
+        details: 'Penne în sos alb de smântână și usturoi, bacon, Mozzarella, Parmezan, jalapeños (la cerere).',
+        price: '27.50',
+      },
+      {
+        img: TomatoVeggie,
+        alt: 'paste',
+        summary: 'Penne Tomato Veggie',
+        details: 'Penne în sos de roșii, ciuperci, roșii Cherry, Parmezan.',
+        price: '27.50',
+      },
+      {
+        img: ChickenPasta,
+        alt: 'paste',
+        summary: 'Chicken Pasta',
+        details: 'Penne în sos alb de smântână, piept de pui, pesto verde, Parmezan.',
+        price: '31.50',
       },
     ],
   },
