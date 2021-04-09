@@ -36,6 +36,11 @@ import UrsusImg from '../images/bauturi/ursus.jpg';
 import TuborgImg from '../images/bauturi/tuborg.jpg';
 import CarlsbergImg from '../images/bauturi/carlsberg.jpg';
 
+import DulceImg from '../images/sosuri/dulce.jpg';
+import PicantImg from '../images/sosuri/picant.jpg';
+import SalsaImg from '../images/sosuri/salsa.jpg';
+import UsturoiImg from '../images/sosuri/usturoi.jpg';
+
 const FoodData = [
   {
     categoryName: 'pizza',
@@ -293,6 +298,39 @@ const FoodData = [
         summary: 'Bere Carlsberg 500ml',
         details: '',
         price: '7.00',
+      },
+    ],
+  },
+  {
+    categoryName: 'sosuri',
+    data: [
+      {
+        img: DulceImg,
+        alt: 'sos',
+        summary: 'Ketchup dulce',
+        details: '',
+        price: '4.00',
+      },
+      {
+        img: PicantImg,
+        alt: 'sos',
+        summary: 'Ketchup picant',
+        details: '',
+        price: '4.00',
+      },
+      {
+        img: SalsaImg,
+        alt: 'sos',
+        summary: 'Sos salsa',
+        details: '',
+        price: '4.00',
+      },
+      {
+        img: UsturoiImg,
+        alt: 'sos',
+        summary: 'Sus de usturoi',
+        details: '',
+        price: '4.00',
       },
     ],
   },
