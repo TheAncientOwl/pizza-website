@@ -6,6 +6,12 @@ import QuattroStagioniImg from '../images/pizza/quattroStagioni.jpg';
 import HamBaconImg from '../images/pizza/hamBacon.jpg';
 import MeatLoversImg from '../images/pizza/meatLovers.jpg';
 
+import CartofiCoptiImg from '../images/antreuri/cartofiCopti.jpg';
+import CartofiCoptiMozzarellaImg from '../images/antreuri/cartofiCoptiMozzarella.jpg';
+import GarlicBreadImg from '../images/antreuri/garlicBread.jpg';
+import QuesadillaImg from '../images/antreuri/quesadilla.jpg';
+import ChickenWingsImg from '../images/antreuri/chickenWings.jpg';
+
 const FoodData = [
   {
     categoryName: 'pizza',
@@ -59,6 +65,47 @@ const FoodData = [
         summary: 'Meat Lovers',
         details: 'Sos de roșii, Mozzarella, piept de pui, cubulețe cu carne de vită, salam Pepperoni, bacon.',
         price: '24.50',
+      },
+    ],
+  },
+  {
+    categoryName: 'antreuri',
+    data: [
+      {
+        img: CartofiCoptiImg,
+        alt: 'antreu',
+        summary: 'Cartofi copți',
+        details: 'Cartofi copţi, serviți cu unul dintre sosurile noastre.',
+        price: '9.50',
+      },
+      {
+        img: CartofiCoptiMozzarellaImg,
+        alt: 'antreu',
+        summary: 'Cartofi copți cu Mozzarella',
+        details: 'Cartofi copţi cu Mozzarella, serviți cu unul dintre sosurile noastre.',
+        price: '11.50',
+      },
+      {
+        img: GarlicBreadImg,
+        alt: 'antreu',
+        summary: 'Garlic bread cu Mozzarella',
+        details: '3 felii de pâine rumenite în cuptor, asezonate cu aromă de usturoi și acoperite cu Mozzarella.',
+        price: '7.50',
+      },
+      {
+        img: QuesadillaImg,
+        alt: 'antreu',
+        summary: 'Quesadilla pui',
+        details:
+          'Piept de pui, Cheddar, ardei capia, ceapă roșie, tortilla. Se servește cu unul dintre sosurile noastre.',
+        price: '20.50',
+      },
+      {
+        img: ChickenWingsImg,
+        alt: 'antreu',
+        summary: 'Barbeque Chicken Wings',
+        details: 'Aripioare de pui trecute prin sos Barbeque.',
+        price: '16.50',
       },
     ],
   },
