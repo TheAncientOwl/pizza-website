@@ -4,6 +4,7 @@ const useStyles = makeStyles({
   title: {
     width: '100%',
     textAlign: 'center',
+    fontStyle: 'italic',
   },
 });
 
@@ -12,7 +13,7 @@ export default function NavBarTitle() {
 
   return (
     <Typography variant='h4' className={classes.title}>
-      Ey Pizza Mama
+      * Ey Pizza Mama *
     </Typography>
   );
 }
