@@ -15,6 +15,7 @@ const BASKET_WIDTH = 400;
 const useStyles = makeStyles({
   root: {
     display: 'flex',
+    flexDirection: 'column',
   },
 });
 
