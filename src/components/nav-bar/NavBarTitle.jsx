@@ -2,9 +2,8 @@ import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   title: {
-    width: '100%',
-    textAlign: 'center',
     fontStyle: 'italic',
+    paddingLeft: '2vw',
   },
 });
 
