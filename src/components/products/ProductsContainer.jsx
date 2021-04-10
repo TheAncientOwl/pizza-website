@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 export default function ProductsContainer({ children }) {
   const classes = useStyles();
 
-  return <main className={classes.content}>{children}</main>;
+  return <div className={classes.content}>{children}</div>;
 }
 
 ProductsContainer.propTypes = {
