@@ -5,7 +5,7 @@ import { Typography, makeStyles } from '@material-ui/core';
 import BasketContainer from './basket/BasketContainer';
 import NavBarContainer from './nav-bar/NavBarContainer';
 import ProductsContainer from './products/ProductsContainer';
-import NavBarTitle from './nav-bar/NavBarTitle';
+import NavBarLogo from './nav-bar/NavBarLogo';
 import BasketToggleButton from './basket/BasketToggleButton';
 import NavBarButtons from './nav-bar/NavBarButtons';
 import NavBarDivider from './nav-bar/NavBarDivider';
@@ -15,7 +15,6 @@ const BASKET_WIDTH = 400;
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    flexDirection: 'column',
   },
 });
 
@@ -28,7 +27,7 @@ export default function Layout() {
   return (
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
-        <NavBarTitle />
+        <NavBarLogo />
         <NavBarDivider />
         <NavBarButtons />
         <BasketToggleButton onClick={handleBasketToggle} />

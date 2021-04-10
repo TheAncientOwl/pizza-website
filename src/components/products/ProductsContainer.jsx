@@ -6,12 +6,20 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  toolbar: {
+    minHeight: '110px',
+  },
 }));
 
 export default function ProductsContainer({ children }) {
   const classes = useStyles();
 
-  return <div className={classes.content}>{children}</div>;
+  return (
+    <div className={classes.content}>
+      <div className={classes.toolbar} />
+      {children}
+    </div>
+  );
 }
 
 ProductsContainer.propTypes = {
