@@ -8,6 +8,8 @@ const useStyles = makeStyles(theme => ({
     fontStyle: 'italic',
     fontWeight: 'bold',
 
+    marginTop: '1vh',
+
     paddingTop: '1vh',
     paddingBottom: '1vh',
     paddingLeft: '2vw',
