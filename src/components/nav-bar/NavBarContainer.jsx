@@ -7,6 +7,7 @@ const useStyles = makeStyles(theme => ({
       width: props => `calc(100% - ${props.basketWidth}px)`,
       marginRight: props => props.basketWidth,
     },
+    background: theme.palette.background.default,
   },
   toolbar: {
     display: 'flex',
