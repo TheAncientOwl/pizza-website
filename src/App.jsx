@@ -5,23 +5,23 @@ const theme = createMuiTheme({
   overrides: {
     MuiDrawer: {
       paper: {
-        background: '#556779',
+        background: '#06111C',
       },
     },
   },
   palette: {
     background: {
-      default: '#111A23',
+      default: '#121317',
     },
     primary: {
-      main: '#2A4158',
+      main: '#BB2020',
     },
     secondary: {
-      main: '#556779',
+      main: '#FFEB4D',
     },
     text: {
-      primary: '#AAB3BC',
-      secondary: '#AAB3BC',
+      primary: '#BEC7C7',
+      secondary: '#BEC7C7',
     },
   },
 });
