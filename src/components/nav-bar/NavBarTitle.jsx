@@ -12,7 +12,7 @@ export default function NavBarTitle() {
   const classes = useStyles();
 
   return (
-    <Typography variant='h4' className={classes.title}>
+    <Typography component='div' variant='h4' className={classes.title}>
       * Ey Pizza Mama *
     </Typography>
   );
