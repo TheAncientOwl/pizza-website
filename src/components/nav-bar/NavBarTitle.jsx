@@ -16,6 +16,8 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '2vw',
 
     borderRadius: '1vw',
+
+    textAlign: 'center',
   },
 }));
 
@@ -24,7 +26,7 @@ export default function NavBarTitle() {
 
   return (
     <Typography component='div' variant='h4' className={classes.title}>
-      * Ey Pizza Mama *
+      * Pizza Mama *
     </Typography>
   );
 }
