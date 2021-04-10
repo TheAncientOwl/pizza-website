@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'flex-start',
   },
 }));
 
