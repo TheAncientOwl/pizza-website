@@ -6,18 +6,12 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  toolbar: theme.mixins.toolbar,
 }));
 
 export default function ProductsContainer({ children }) {
   const classes = useStyles();
 
-  return (
-    <main className={classes.content}>
-      <div className={classes.toolbar} />
-      {children}
-    </main>
-  );
+  return <main className={classes.content}>{children}</main>;
 }
 
 ProductsContainer.propTypes = {
