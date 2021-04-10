@@ -7,12 +7,9 @@ const useStyles = makeStyles({
     maxWidth: '300px',
     height: 'auto',
 
-    marginTop: '1vh',
-
-    paddingTop: '1vh',
-    paddingBottom: '1vh',
-    paddingLeft: '2vw',
-    paddingRight: '2vw',
+    marginTop: '10px',
+    paddingLeft: '1vw',
+    paddingRight: '1vw',
   },
 });
 
