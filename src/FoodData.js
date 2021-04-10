@@ -1,45 +1,45 @@
-import MargheritaImg from '../images/pizza/margherita.jpg';
-import RomaImg from '../images/pizza/roma.jpg';
-import PepperoniImg from '../images/pizza/pepperoni.jpg';
-import AmericanSpicyImg from '../images/pizza/americanSpicy.jpg';
-import QuattroStagioniImg from '../images/pizza/quattroStagioni.jpg';
-import HamBaconImg from '../images/pizza/hamBacon.jpg';
-import MeatLoversImg from '../images/pizza/meatLovers.jpg';
+import MargheritaImg from './images/pizza/margherita.jpg';
+import RomaImg from './images/pizza/roma.jpg';
+import PepperoniImg from './images/pizza/pepperoni.jpg';
+import AmericanSpicyImg from './images/pizza/americanSpicy.jpg';
+import QuattroStagioniImg from './images/pizza/quattroStagioni.jpg';
+import HamBaconImg from './images/pizza/hamBacon.jpg';
+import MeatLoversImg from './images/pizza/meatLovers.jpg';
 
-import CartofiCoptiImg from '../images/antreuri/cartofiCopti.jpg';
-import CartofiCoptiMozzarellaImg from '../images/antreuri/cartofiCoptiMozzarella.jpg';
-import GarlicBreadImg from '../images/antreuri/garlicBread.jpg';
-import QuesadillaImg from '../images/antreuri/quesadilla.jpg';
-import ChickenWingsImg from '../images/antreuri/chickenWings.jpg';
+import CartofiCoptiImg from './images/antreuri/cartofiCopti.jpg';
+import CartofiCoptiMozzarellaImg from './images/antreuri/cartofiCoptiMozzarella.jpg';
+import GarlicBreadImg from './images/antreuri/garlicBread.jpg';
+import QuesadillaImg from './images/antreuri/quesadilla.jpg';
+import ChickenWingsImg from './images/antreuri/chickenWings.jpg';
 
-import BologneseImg from '../images/paste/bolognese.jpg';
-import CarbonaraImg from '../images/paste/carbonara.jpg';
-import TomatoVeggieImg from '../images/paste/tomatoVeggie.jpg';
-import ChickenPastaImg from '../images/paste/chickenPasta.jpg';
+import BologneseImg from './images/paste/bolognese.jpg';
+import CarbonaraImg from './images/paste/carbonara.jpg';
+import TomatoVeggieImg from './images/paste/tomatoVeggie.jpg';
+import ChickenPastaImg from './images/paste/chickenPasta.jpg';
 
-import TunaImg from '../images/salate/tuna.jpg';
-import GreceascaImg from '../images/salate/greceasca.jpg';
-import CaesarImg from '../images/salate/caesar.jpg';
+import TunaImg from './images/salate/tuna.jpg';
+import GreceascaImg from './images/salate/greceasca.jpg';
+import CaesarImg from './images/salate/caesar.jpg';
 
-import BrownieImg from '../images/desert/brownie.jpg';
-import CookieDoughImg from '../images/desert/cookieDough.jpg';
-import ChocolateTortilla from '../images/desert/chocolateTortilla.jpg';
-import CapsuniFriscaImg from '../images/desert/capsuniFrisca.jpg';
+import BrownieImg from './images/desert/brownie.jpg';
+import CookieDoughImg from './images/desert/cookieDough.jpg';
+import ChocolateTortilla from './images/desert/chocolateTortilla.jpg';
+import CapsuniFriscaImg from './images/desert/capsuniFrisca.jpg';
 
-import CocaColaImg from '../images/bauturi/cocaCola.jpg';
-import SpriteImg from '../images/bauturi/sprite.jpg';
-import FantaImg from '../images/bauturi/fanta.jpg';
-import CappyImg from '../images/bauturi/cappy.jpg';
-import FuzeteaImg from '../images/bauturi/fuzetea.jpg';
-import DornaImg from '../images/bauturi/dorna.jpg';
-import UrsusImg from '../images/bauturi/ursus.jpg';
-import TuborgImg from '../images/bauturi/tuborg.jpg';
-import CarlsbergImg from '../images/bauturi/carlsberg.jpg';
+import CocaColaImg from './images/bauturi/cocaCola.jpg';
+import SpriteImg from './images/bauturi/sprite.jpg';
+import FantaImg from './images/bauturi/fanta.jpg';
+import CappyImg from './images/bauturi/cappy.jpg';
+import FuzeteaImg from './images/bauturi/fuzetea.jpg';
+import DornaImg from './images/bauturi/dorna.jpg';
+import UrsusImg from './images/bauturi/ursus.jpg';
+import TuborgImg from './images/bauturi/tuborg.jpg';
+import CarlsbergImg from './images/bauturi/carlsberg.jpg';
 
-import DulceImg from '../images/sosuri/dulce.jpg';
-import PicantImg from '../images/sosuri/picant.jpg';
-import SalsaImg from '../images/sosuri/salsa.jpg';
-import UsturoiImg from '../images/sosuri/usturoi.jpg';
+import DulceImg from './images/sosuri/dulce.jpg';
+import PicantImg from './images/sosuri/picant.jpg';
+import SalsaImg from './images/sosuri/salsa.jpg';
+import UsturoiImg from './images/sosuri/usturoi.jpg';
 
 const FoodData = [
   {
