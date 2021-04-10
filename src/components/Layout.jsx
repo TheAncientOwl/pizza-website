@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 import { Typography, makeStyles } from '@material-ui/core';
 
-import BasketContainer from './layout-containers/BasketContainer';
-import NavBarContainer from './layout-containers/NavBarContainer';
-import ProductsContainer from './layout-containers/ProductsContainer';
+import BasketContainer from './basket/BasketContainer';
+import NavBarContainer from './nav-bar/NavBarContainer';
+import ProductsContainer from './products/ProductsContainer';
 import NavBarTitle from './nav-bar/NavBarTitle';
 import BasketToggleButton from './basket/BasketToggleButton';
+import NavBarButtons from './nav-bar/NavBarButtons';
 
 const BASKET_WIDTH = 400;
 
@@ -26,6 +27,7 @@ export default function Layout() {
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
         <NavBarTitle />
+        <NavBarButtons />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
