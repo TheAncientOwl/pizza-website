@@ -1,27 +1,20 @@
 import React, { useState } from 'react';
 
-import { Typography, makeStyles, IconButton } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Typography, makeStyles } from '@material-ui/core';
 
 import BasketContainer from './layout-containers/BasketContainer';
 import NavBarContainer from './layout-containers/NavBarContainer';
 import ProductsContainer from './layout-containers/ProductsContainer';
 import NavBarTitle from './nav-bar/NavBarTitle';
+import BasketToggleButton from './basket/BasketToggleButton';
 
 const BASKET_WIDTH = 400;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     display: 'flex',
   },
-  basketButton: {
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-    position: 'fixed',
-    right: '0',
-  },
-}));
+});
 
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,15 +26,7 @@ export default function Layout() {
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
         <NavBarTitle />
-
-        <IconButton
-          color='inherit'
-          aria-label='open drawer'
-          edge='start'
-          onClick={handleBasketToggle}
-          className={classes.basketButton}>
-          <MenuIcon />
-        </IconButton>
+        <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
       <ProductsContainer>
