@@ -1,46 +1,24 @@
 import React, { useState } from 'react';
 
-import { AppBar, Drawer, Hidden, IconButton, Toolbar, Typography, makeStyles } from '@material-ui/core';
-
+import { Typography, makeStyles, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const drawerWidth = 350;
+import BasketContainer from './layout-containers/BasketContainer';
+import NavBarContainer from './layout-containers/NavBarContainer';
+import ProductsContainer from './layout-containers/ProductsContainer';
+
+const BASKET_WIDTH = 400;
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
   },
-
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
-
-  appBar: {
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-  },
-
   basketButton: {
-    marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
-  },
-
-  toolbar: theme.mixins.toolbar,
-
-  drawerPaper: {
-    width: drawerWidth,
-  },
-
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
+    position: 'fixed',
+    right: '0',
   },
 }));
 
@@ -48,66 +26,26 @@ export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const classes = useStyles();
 
-  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
-
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      ceawsadfsf
-    </div>
-  );
+  const handleBasketToggle = () => setMobileOpen(!mobileOpen);
 
   return (
     <div className={classes.root}>
-      <AppBar position='fixed' className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            className={classes.basketButton}>
-            <MenuIcon />
-          </IconButton>
+      <NavBarContainer basketWidth={BASKET_WIDTH}>
+        <Typography variant='h6' noWrap>
+          Ey Pizza Mama
+        </Typography>
 
-          <Typography variant='h6' noWrap>
-            Responsive drawer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+        <IconButton
+          color='inherit'
+          aria-label='open drawer'
+          edge='start'
+          onClick={handleBasketToggle}
+          className={classes.basketButton}>
+          <MenuIcon />
+        </IconButton>
+      </NavBarContainer>
 
-      <nav className={classes.drawer}>
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation='css'>
-          <Drawer
-            container={window.document.body}
-            variant='temporary'
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true,
-            }}>
-            {drawer}
-          </Drawer>
-        </Hidden>
-
-        <Hidden xsDown implementation='css'>
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant='permanent'
-            open>
-            {drawer}
-          </Drawer>
-        </Hidden>
-      </nav>
-
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
+      <ProductsContainer>
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
@@ -118,7 +56,11 @@ export default function Layout() {
           lobortis feugiat vivamus at augue. At augue eget arcu dictum varius duis at consectetur lorem. Velit sed
           ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
         </Typography>
-      </main>
+      </ProductsContainer>
+
+      <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
+        <div style={{ textAlign: 'center', marginTop: '10vh' }}>My Basket</div>
+      </BasketContainer>
     </div>
   );
 }
