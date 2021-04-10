@@ -6,6 +6,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import BasketContainer from './layout-containers/BasketContainer';
 import NavBarContainer from './layout-containers/NavBarContainer';
 import ProductsContainer from './layout-containers/ProductsContainer';
+import NavBarTitle from './nav-bar/NavBarTitle';
 
 const BASKET_WIDTH = 400;
 
@@ -31,9 +32,7 @@ export default function Layout() {
   return (
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
-        <Typography variant='h6' noWrap>
-          Ey Pizza Mama
-        </Typography>
+        <NavBarTitle />
 
         <IconButton
           color='inherit'
