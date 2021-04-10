@@ -1,5 +1,5 @@
-import Content from './Content';
+import Layout from './Layout';
 
 export default function App() {
-  return <Content />;
+  return <Layout />;
 }
