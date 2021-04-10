@@ -8,6 +8,8 @@ const useStyles = makeStyles({
     height: 'auto',
 
     marginTop: '10px',
+    marginBottom: '10px',
+
     paddingLeft: '1vw',
     paddingRight: '1vw',
   },
@@ -15,9 +17,5 @@ const useStyles = makeStyles({
 
 export default function NavBarLogo() {
   const classes = useStyles();
-  return (
-    <div>
-      <img className={classes.logo} alt='Ey Pizza Mama' src={Logo} />
-    </div>
-  );
+  return <img className={classes.logo} alt='Ey Pizza Mama' src={Logo} />;
 }

@@ -8,9 +8,6 @@ const useStyles = makeStyles(theme => ({
     borderWidth: '0.5px',
     borderRadius: '2px',
 
-    marginTop: '0.9vh',
-    marginBottom: '0.5vh',
-
     borderColor: theme.palette.text.primary,
   },
 }));
