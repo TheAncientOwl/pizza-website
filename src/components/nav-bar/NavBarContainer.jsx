@@ -8,6 +8,10 @@ const useStyles = makeStyles(theme => ({
       marginRight: props => props.basketWidth,
     },
   },
+  toolbar: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
 }));
 
 export default function NavBarContainer({ basketWidth, children }) {
@@ -15,7 +19,7 @@ export default function NavBarContainer({ basketWidth, children }) {
 
   return (
     <AppBar position='fixed' className={classes.appBar}>
-      <Toolbar>{children}</Toolbar>
+      <Toolbar className={classes.toolbar}>{children}</Toolbar>
     </AppBar>
   );
 }
