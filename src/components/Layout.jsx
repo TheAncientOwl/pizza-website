@@ -8,7 +8,6 @@ import ProductsContainer from './products/ProductsContainer';
 import NavBarLogo from './nav-bar/NavBarLogo';
 import BasketToggleButton from './basket/BasketToggleButton';
 import NavBarButtons from './nav-bar/NavBarButtons';
-import NavBarDivider from './nav-bar/NavBarDivider';
 
 const BASKET_WIDTH = 400;
 
@@ -28,9 +27,7 @@ export default function Layout() {
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
         <NavBarLogo />
-        <NavBarDivider />
         <NavBarButtons />
-        <NavBarDivider />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
