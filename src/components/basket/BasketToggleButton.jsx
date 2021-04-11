@@ -8,8 +8,17 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
+
+    background: theme.palette.background.default,
+    color: theme.palette.secondary.main,
+
     position: 'fixed',
-    right: '0',
+    bottom: '5px',
+    left: '17px',
+
+    borderStyle: 'solid',
+    borderColor: 'green',
+    borderWidth: '0.5px',
   },
 }));
 
