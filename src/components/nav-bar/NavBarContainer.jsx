@@ -28,5 +28,5 @@ export default function NavBarContainer({ basketWidth, children }) {
 
 NavBarContainer.propTypes = {
   basketWidth: PropTypes.number.isRequired,
-  children: PropTypes.number.isRequired,
+  children: PropTypes.any.isRequired,
 };
