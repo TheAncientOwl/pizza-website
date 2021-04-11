@@ -7,27 +7,31 @@ const useStyles = makeStyles(theme => ({
 
     fontStyle: 'italic',
     fontWeight: 'bold',
+    fontSize: '2em',
 
     marginTop: '1vh',
+    marginBottom: '1vh',
 
-    paddingTop: '1vh',
-    paddingBottom: '1vh',
-    paddingLeft: '2vw',
-    paddingRight: '2vw',
+    paddingTop: '5px',
+    paddingBottom: '5px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
 
-    borderRadius: '1vw',
+    borderRadius: '15px',
 
     textAlign: 'center',
   },
 }));
+
+const TITLE = '* Ey Pizza Mama *';
 
 /*@deprecated */
 export default function NavBarTitle() {
   const classes = useStyles();
 
   return (
-    <Typography component='div' variant='h4' className={classes.title}>
-      * Pizza Mama *
+    <Typography component='div' className={classes.title}>
+      {TITLE}
     </Typography>
   );
 }
