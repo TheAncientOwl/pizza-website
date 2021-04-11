@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { IconButton, makeStyles } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles(theme => ({
   basketButton: {
@@ -23,7 +23,7 @@ export default function BasketToggleButton({ onClick }) {
       edge='start'
       onClick={onClick}
       className={classes.basketButton}>
-      <MenuIcon />
+      <ShoppingCartIcon />
     </IconButton>
   );
 }
