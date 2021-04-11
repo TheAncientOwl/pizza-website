@@ -1,4 +1,4 @@
-import { makeStyles, Hidden, SwipeableDrawer } from '@material-ui/core';
+import { makeStyles, Hidden, SwipeableDrawer, Drawer } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
@@ -24,6 +24,7 @@ export default function BasketContainer({ width, mobileOpen, onToggle, children 
           container={window.document.body}
           variant='temporary'
           open={mobileOpen}
+          onOpen={() => {}}
           onClose={onToggle}
           classes={{ paper: classes.drawerPaper }}
           ModalProps={{ keepMounted: true }}>
@@ -32,9 +33,9 @@ export default function BasketContainer({ width, mobileOpen, onToggle, children 
       </Hidden>
 
       <Hidden xsDown implementation='css'>
-        <SwipeableDrawer anchor='right' classes={{ paper: classes.drawerPaper }} variant='permanent' open>
+        <Drawer anchor='right' classes={{ paper: classes.drawerPaper }} variant='permanent' open>
           {children}
-        </SwipeableDrawer>
+        </Drawer>
       </Hidden>
     </nav>
   );
