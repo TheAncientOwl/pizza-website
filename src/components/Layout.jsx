@@ -30,6 +30,7 @@ export default function Layout() {
         <NavBarLogo />
         <NavBarDivider />
         <NavBarButtons />
+        <NavBarDivider />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
