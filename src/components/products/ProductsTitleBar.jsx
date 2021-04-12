@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
     borderStyle: 'solid',
     borderRadius: '15px',
     borderWidth: '3px',
+    borderColor: theme.palette.text.primary,
   },
   bar: {
     marginTop: 'auto',
@@ -35,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     borderStyle: 'solid',
     borderWidth: '0.5px',
     borderRadius: '2px',
+    borderColor: theme.palette.text.primary,
   },
 }));
 
