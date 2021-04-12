@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [currentCategory] = useState(FoodData[0].categoryName);
-  const [currentProducts] = useState(FoodData[0].data);
+  //const [currentProducts] = useState(FoodData[0].data);
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
@@ -38,7 +38,7 @@ export default function Layout() {
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
-      <ProductsContainer categoryName={currentCategory} products={currentProducts}>
+      <ProductsContainer>
         <ProductsTitleBar title={currentCategory} />
       </ProductsContainer>
 
