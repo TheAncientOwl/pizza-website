@@ -13,6 +13,7 @@ import NavBarButtons from './nav-bar/NavBarButtons';
 import ProductsTitleBar from './products/ProductsTitleBar';
 
 import FoodData from '../FoodData';
+import ProductsGrid from './products/ProductsGrid';
 
 const BASKET_WIDTH = 400;
 
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [currentCategory] = useState(FoodData[0].categoryName);
-  //const [currentProducts] = useState(FoodData[0].data);
+  const [currentProducts] = useState(FoodData[0].data);
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
@@ -40,6 +41,7 @@ export default function Layout() {
 
       <ProductsContainer>
         <ProductsTitleBar title={currentCategory} />
+        <ProductsGrid products={currentProducts} />
       </ProductsContainer>
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
