@@ -5,11 +5,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(3),
-  },
-  content: {
+
     marginLeft: '10px',
     marginRight: '10px',
-    minHeight: '75vh',
+    minHeight: '100vh',
 
     borderStyle: 'solid',
     borderColor: 'green',
@@ -24,12 +23,10 @@ export default function ProductsContainer({ children }) {
   const classes = useStyles();
 
   return (
-    <>
-      <div className={classes.root}>
-        <div className={classes.toolbar} />
-        <div className={classes.content}>{children}</div>
-      </div>
-    </>
+    <div className={classes.root}>
+      <div className={classes.toolbar} />
+      {children}
+    </div>
   );
 }
 
