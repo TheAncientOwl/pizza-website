@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+/*TO DO: solve buttons overflow on mobile */
 export default function NavBarButtons() {
   const classes = useStyles();
 
