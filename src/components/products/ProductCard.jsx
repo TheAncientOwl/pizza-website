@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-export default function ProductCard({ summary }) {
-  return <span>{summary}</span>;
+export default function ProductCard({ product }) {
+  return <span>{product.summary}</span>;
 }
 
 ProductCard.propTypes = {
-  summary: PropTypes.string.isRequired,
+  product: PropTypes.any.isRequired,
 };

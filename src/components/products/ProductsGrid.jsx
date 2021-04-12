@@ -15,7 +15,7 @@ export default function ProductsGrid({ products }) {
     <Grid container justify='center' spacing={2} className={classes.grid}>
       {products.map((product, index) => (
         <Grid item key={index}>
-          <ProductCard summary={product.summary} />
+          <ProductCard product={product} />
         </Grid>
       ))}
     </Grid>
