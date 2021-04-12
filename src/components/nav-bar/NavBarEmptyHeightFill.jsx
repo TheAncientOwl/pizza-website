@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
   fill: {
-    height: '20vh',
+    minHeight: '110px',
   },
 });
 

@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import NavBarEmptyHeightFill from '../nav-bar/NavBarEmptyHeightFill';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,9 +15,6 @@ const useStyles = makeStyles(theme => ({
     borderColor: 'green',
     borderWidth: '0.5px',
   },
-  toolbar: {
-    minHeight: '110px',
-  },
 }));
 
 export default function ProductsContainer({ children }) {
@@ -24,7 +22,7 @@ export default function ProductsContainer({ children }) {
 
   return (
     <div className={classes.root}>
-      <div className={classes.toolbar} />
+      <NavBarEmptyHeightFill />
       {children}
     </div>
   );
