@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 export default function ProductsGrid({ products }) {
   const classes = useStyles();
   return (
-    <Grid container justify='center' spacing={2} className={classes.grid}>
+    <Grid container justify='center' spacing={3} className={classes.grid}>
       {products.map((product, index) => (
         <Grid item key={index}>
           <ProductCard product={product} />
