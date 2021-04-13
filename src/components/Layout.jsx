@@ -15,7 +15,7 @@ import ProductsTitleBar from './products/ProductsTitleBar';
 import FoodData from '../FoodData';
 import ProductsGrid from './products/ProductsGrid';
 
-const BASKET_WIDTH = 400;
+const BASKET_WIDTH = 350;
 
 const useStyles = makeStyles({
   root: {
