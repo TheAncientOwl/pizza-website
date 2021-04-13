@@ -98,6 +98,39 @@ const FoodData = [
     ],
   },
   {
+    categoryName: 'paste',
+    data: [
+      {
+        img: BologneseImg,
+        alt: 'paste',
+        summary: 'Penne Bolognese',
+        details: 'Penne în sos ragù, cubulețe cu carne de vită,  Mozzarella.',
+        price: '27.50',
+      },
+      {
+        img: CarbonaraImg,
+        alt: 'paste',
+        summary: 'Carbonara',
+        details: 'Penne în sos alb de smântână și usturoi, bacon, Mozzarella, Parmezan, jalapeños (la cerere).',
+        price: '27.50',
+      },
+      {
+        img: TomatoVeggieImg,
+        alt: 'paste',
+        summary: 'Penne Tomato Veggie',
+        details: 'Penne în sos de roșii, ciuperci, roșii Cherry, Parmezan.',
+        price: '27.50',
+      },
+      {
+        img: ChickenPastaImg,
+        alt: 'paste',
+        summary: 'Chicken Pasta',
+        details: 'Penne în sos alb de smântână, piept de pui, pesto verde, Parmezan.',
+        price: '31.50',
+      },
+    ],
+  },
+  {
     categoryName: 'antreuri',
     data: [
       {
@@ -135,39 +168,6 @@ const FoodData = [
         summary: 'Barbeque Chicken Wings',
         details: 'Aripioare de pui trecute prin sos Barbeque.',
         price: '16.50',
-      },
-    ],
-  },
-  {
-    categoryName: 'paste',
-    data: [
-      {
-        img: BologneseImg,
-        alt: 'paste',
-        summary: 'Penne Bolognese',
-        details: 'Penne în sos ragù, cubulețe cu carne de vită,  Mozzarella.',
-        price: '27.50',
-      },
-      {
-        img: CarbonaraImg,
-        alt: 'paste',
-        summary: 'Carbonara',
-        details: 'Penne în sos alb de smântână și usturoi, bacon, Mozzarella, Parmezan, jalapeños (la cerere).',
-        price: '27.50',
-      },
-      {
-        img: TomatoVeggieImg,
-        alt: 'paste',
-        summary: 'Penne Tomato Veggie',
-        details: 'Penne în sos de roșii, ciuperci, roșii Cherry, Parmezan.',
-        price: '27.50',
-      },
-      {
-        img: ChickenPastaImg,
-        alt: 'paste',
-        summary: 'Chicken Pasta',
-        details: 'Penne în sos alb de smântână, piept de pui, pesto verde, Parmezan.',
-        price: '31.50',
       },
     ],
   },
