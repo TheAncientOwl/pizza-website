@@ -8,6 +8,7 @@ import BasketToggleButton from './basket/BasketToggleButton';
 import NavBarContainer from './nav-bar/NavBarContainer';
 import NavBarLogo from './nav-bar/NavBarLogo';
 import NavBarButtons from './nav-bar/NavBarButtons';
+import { TopAnchor } from './nav-bar/TopAnchor';
 
 import ProductsContainer from './products/ProductsContainer';
 import ProductsTitleBar from './products/ProductsTitleBar';
@@ -45,6 +46,7 @@ export default function Layout() {
       </NavBarContainer>
 
       <ProductsContainer>
+        <TopAnchor />
         <ProductsTitleBar title={currentTitle} />
         <ProductsGrid products={currentProducts} />
       </ProductsContainer>
