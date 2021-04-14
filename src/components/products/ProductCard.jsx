@@ -6,7 +6,6 @@ const useStyles = makeStyles(theme => ({
   card: {
     background: theme.palette.background.default,
 
-    height: '330px',
     width: '260px',
 
     boxShadow: `9px 7px 7px ${theme.palette.secondary.main}`,
