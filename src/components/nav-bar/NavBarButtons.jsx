@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import NavBarDivider from './NavBarDivider';
 
-import { moveToTopAnchor } from './TopAnchor';
+import { moveToTopAnchor } from '../TopAnchor';
 
 import FoodData from '../../FoodData';
 
