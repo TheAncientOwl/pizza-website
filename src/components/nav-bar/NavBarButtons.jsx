@@ -3,20 +3,12 @@ import PropTypes from 'prop-types';
 
 import FoodData from '../../FoodData';
 import Divider from '../Divider';
+import ScrollMenu from '../scroll-menu/ScrollMenu';
+import ScrollMenuItem from '../scroll-menu/ScrollMenuItem';
 
 const useStyles = makeStyles(theme => ({
   button: {
     background: theme.palette.background.default,
-  },
-  buttonSelect: {},
-  scrollMenu: {
-    overflow: 'auto',
-    whiteSpace: 'nowrap',
-    width: '100%',
-  },
-  scrollMenuItem: {
-    display: 'inline-block',
-    textAlign: 'center',
   },
 }));
 
@@ -30,9 +22,9 @@ export default function NavBarButtons({ onCategoryChange, currentTitle }) {
   return (
     <>
       {divider}
-      <div className={classes.scrollMenu}>
+      <ScrollMenu>
         {FoodData.map((category, index) => (
-          <div key={index} className={classes.scrollMenuItem}>
+          <ScrollMenuItem key={index}>
             <Button
               className={category.categoryName === currentTitle ? classes.buttonSelect : classes.button}
               color='primary'
@@ -41,9 +33,9 @@ export default function NavBarButtons({ onCategoryChange, currentTitle }) {
               onClick={() => onCategoryChange(category.categoryName, category.data)}>
               {category.categoryName}
             </Button>
-          </div>
+          </ScrollMenuItem>
         ))}
-      </div>
+      </ScrollMenu>
       {divider}
     </>
   );
