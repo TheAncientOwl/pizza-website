@@ -1,6 +1,6 @@
 import { makeStyles, Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import ProductImage from './ProductImage';
+import ProductImage from './product-components/ProductImage';
 
 const useStyles = makeStyles(theme => ({
   card: {
