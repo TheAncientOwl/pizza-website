@@ -1,6 +1,7 @@
-import { makeStyles, Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
+import { makeStyles, Card, Typography, CardActions, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import ProductImage from './product-components/ProductImage';
+import ProductContent from './product-components/ProductContent';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -52,15 +53,7 @@ export default function ProductCard({ product }) {
     <Card className={classes.card}>
       <ProductImage src={product.img} alt={product.alt} />
 
-      <CardContent className={classes.content}>
-        <Typography variant='body1' color='textPrimary'>
-          {product.summary}
-        </Typography>
-
-        <Typography variant='body2' color='textSecondary' paragraph>
-          {product.details}
-        </Typography>
-      </CardContent>
+      <ProductContent summary={product.summary} details={product.details} />
 
       <div className={classes.divider} />
 
