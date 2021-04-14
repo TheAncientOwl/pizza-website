@@ -1,11 +1,11 @@
 import { makeStyles, Card, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import ProductImage from './product-components/ProductImage';
-import ProductContent from './product-components/ProductContent';
-import Divider from '../Divider';
-import ProductActions from './product-components/ProductActions';
-import AddButton from './product-components/AddButton';
-import ProductPrice from './product-components/ProductPrice';
+import ProductImage from './ProductImage';
+import ProductContent from './ProductContent';
+import Divider from '../../Divider';
+import ProductActions from './ProductActions';
+import AddButton from './AddButton';
+import ProductPrice from './ProductPrice';
 
 const useStyles = makeStyles(theme => ({
   card: {

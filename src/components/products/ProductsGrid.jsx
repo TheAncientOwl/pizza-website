@@ -1,7 +1,7 @@
 import { makeStyles, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-import ProductCard from './ProductCard';
+import ProductCard from './product-components/ProductCard';
 
 const useStyles = makeStyles({
   grid: {
