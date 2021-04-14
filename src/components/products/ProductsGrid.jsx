@@ -1,12 +1,12 @@
 import { makeStyles, Grid, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-import ProductCard from './product-components/ProductCard';
-import ProductImage from './product-components/ProductImage';
-import ProductContent from './product-components/ProductContent';
-import ProductActions from './product-components/ProductActions';
-import ProductPrice from './product-components/ProductPrice';
-import AddButton from './product-components/AddButton';
+import ProductCard from './product/ProductCard';
+import ProductImage from './product/ProductImage';
+import ProductContent from './product/ProductContent';
+import ProductActions from './product/ProductActions';
+import ProductPrice from './product/ProductPrice';
+import AddButton from './product/AddButton';
 
 import Divider from '../Divider';
 
