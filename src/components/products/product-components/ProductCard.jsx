@@ -1,42 +1,25 @@
-import { makeStyles, Card, useTheme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import ProductImage from './ProductImage';
-import ProductContent from './ProductContent';
-import Divider from '../../Divider';
-import ProductActions from './ProductActions';
-import AddButton from './AddButton';
-import ProductPrice from './ProductPrice';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    background: theme.palette.background.default,
-
     width: '260px',
-
-    boxShadow: `9px 7px 7px ${theme.palette.secondary.main}`,
+    background: theme.palette.background.default,
+    boxShadow: props => (props.shadows ? `9px 7px 7px ${theme.palette.secondary.main}` : 'none'),
   },
 }));
 
-export default function ProductCard({ product }) {
-  const classes = useStyles();
-  const theme = useTheme();
+export default function ProductCard({ children, shadows }) {
+  const classes = useStyles({ shadows });
 
-  return (
-    <Card className={classes.card}>
-      <ProductImage src={product.img} alt={product.alt} />
-
-      <ProductContent summary={product.summary} details={product.details} />
-
-      <Divider width='90%' color={theme.palette.text.primary} />
-
-      <ProductActions>
-        <AddButton />
-        <ProductPrice price={product.price} />
-      </ProductActions>
-    </Card>
-  );
+  return <div className={classes.card}>{children}</div>;
 }
 
+ProductCard.defaultProps = {
+  shadows: false,
+};
+
 ProductCard.propTypes = {
-  product: PropTypes.any.isRequired,
+  children: PropTypes.any.isRequired,
+  shadows: PropTypes.bool,
 };

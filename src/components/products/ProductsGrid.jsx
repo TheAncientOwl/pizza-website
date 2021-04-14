@@ -1,7 +1,14 @@
-import { makeStyles, Grid } from '@material-ui/core';
+import { makeStyles, Grid, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 import ProductCard from './product-components/ProductCard';
+import ProductImage from './product-components/ProductImage';
+import ProductContent from './product-components/ProductContent';
+import ProductActions from './product-components/ProductActions';
+import ProductPrice from './product-components/ProductPrice';
+import AddButton from './product-components/AddButton';
+
+import Divider from '../Divider';
 
 const useStyles = makeStyles({
   grid: {
@@ -11,11 +18,24 @@ const useStyles = makeStyles({
 
 export default function ProductsGrid({ products }) {
   const classes = useStyles();
+  const theme = useTheme();
+
   return (
     <Grid container justify='center' spacing={3} className={classes.grid}>
       {products.map((product, index) => (
         <Grid item key={index}>
-          <ProductCard product={product} />
+          <ProductCard shadows={true}>
+            <ProductImage src={product.img} alt={product.alt} />
+
+            <ProductContent summary={product.summary} details={product.details} />
+
+            <Divider width='90%' color={theme.palette.text.primary} />
+
+            <ProductActions>
+              <AddButton />
+              <ProductPrice price={product.price} />
+            </ProductActions>
+          </ProductCard>
         </Grid>
       ))}
     </Grid>
