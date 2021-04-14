@@ -8,7 +8,7 @@ import BasketToggleButton from './basket/BasketToggleButton';
 import NavBarContainer from './nav-bar/NavBarContainer';
 import NavBarLogo from './nav-bar/NavBarLogo';
 import NavBarButtons from './nav-bar/NavBarButtons';
-import { TopAnchor } from './TopAnchor';
+import { TopAnchor, moveToTopAnchor } from './TopAnchor';
 
 import ProductsContainer from './products/ProductsContainer';
 import ProductsTitleBar from './products/ProductsTitleBar';
@@ -35,6 +35,7 @@ export default function Layout() {
   const handleCategoryChange = (title, products) => {
     setCurrentTitle(title);
     setCurrentProducts(products);
+    moveToTopAnchor();
   };
 
   return (

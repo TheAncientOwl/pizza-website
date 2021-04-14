@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import NavBarDivider from './NavBarDivider';
 
-import { moveToTopAnchor } from '../TopAnchor';
-
 import FoodData from '../../FoodData';
 
 const useStyles = makeStyles(theme => ({
@@ -31,10 +29,7 @@ export default function NavBarButtons({ onCategoryChange, currentTitle }) {
             color='primary'
             variant='contained'
             key={index}
-            onClick={() => {
-              moveToTopAnchor();
-              onCategoryChange(category.categoryName, category.data);
-            }}>
+            onClick={() => onCategoryChange(category.categoryName, category.data)}>
             {category.categoryName}
           </Button>
         ))}
