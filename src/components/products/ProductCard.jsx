@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   divider: {
     width: '90%',
+    marginTop: '5px',
     marginLeft: 'auto',
     marginRight: 'auto',
 
