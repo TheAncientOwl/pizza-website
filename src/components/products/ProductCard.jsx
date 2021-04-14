@@ -1,7 +1,8 @@
-import { makeStyles, Card, Typography, CardActions, Button } from '@material-ui/core';
+import { makeStyles, Card, Typography, CardActions, Button, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import ProductImage from './product-components/ProductImage';
 import ProductContent from './product-components/ProductContent';
+import Divider from '../Divider';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -40,6 +41,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function ProductCard({ product }) {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <Card className={classes.card}>
@@ -47,7 +49,7 @@ export default function ProductCard({ product }) {
 
       <ProductContent summary={product.summary} details={product.details} />
 
-      <div className={classes.divider} />
+      <Divider width='90%' color={theme.palette.text.primary} />
 
       <CardActions className={classes.actions}>
         <Button className={classes.addButton} variant='contained' size='small' color='primary'>

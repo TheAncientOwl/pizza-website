@@ -1,9 +1,8 @@
-import { Button, makeStyles } from '@material-ui/core';
+import { Button, makeStyles, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-import NavBarDivider from './NavBarDivider';
-
 import FoodData from '../../FoodData';
+import Divider from '../Divider';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -24,10 +23,13 @@ const useStyles = makeStyles(theme => ({
 /*TO DO: solve buttons overflow on mobile */
 export default function NavBarButtons({ onCategoryChange, currentTitle }) {
   const classes = useStyles();
+  const theme = useTheme();
+
+  const divider = <Divider color={theme.palette.text.primary} />;
 
   return (
     <>
-      <NavBarDivider />
+      {divider}
       <div className={classes.scrollMenu}>
         {FoodData.map((category, index) => (
           <div key={index} className={classes.scrollMenuItem}>
@@ -42,7 +44,7 @@ export default function NavBarButtons({ onCategoryChange, currentTitle }) {
           </div>
         ))}
       </div>
-      <NavBarDivider />
+      {divider}
     </>
   );
 }
