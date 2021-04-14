@@ -40,7 +40,7 @@ export default function Layout() {
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
         <NavBarLogo />
-        <NavBarButtons onCategoryChange={handleCategoryChange} />
+        <NavBarButtons onCategoryChange={handleCategoryChange} currentTitle={currentTitle} />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 

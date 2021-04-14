@@ -12,10 +12,11 @@ const useStyles = makeStyles(theme => ({
   button: {
     background: theme.palette.background.default,
   },
+  buttonSelect: {},
 }));
 
 /*TO DO: solve buttons overflow on mobile */
-export default function NavBarButtons({ onCategoryChange }) {
+export default function NavBarButtons({ onCategoryChange, currentTitle }) {
   const classes = useStyles();
 
   return (
@@ -24,7 +25,7 @@ export default function NavBarButtons({ onCategoryChange }) {
       <ButtonGroup className={classes.buttonGroup}>
         {FoodData.map((category, index) => (
           <Button
-            className={classes.button}
+            className={category.categoryName === currentTitle ? classes.buttonSelect : classes.button}
             color='primary'
             variant='contained'
             key={index}
@@ -40,4 +41,5 @@ export default function NavBarButtons({ onCategoryChange }) {
 
 NavBarButtons.propTypes = {
   onCategoryChange: PropTypes.func.isRequired,
+  currentTitle: PropTypes.string.isRequired,
 };
