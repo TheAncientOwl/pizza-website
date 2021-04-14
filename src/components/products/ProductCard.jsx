@@ -1,9 +1,11 @@
-import { makeStyles, Card, Typography, Button, useTheme } from '@material-ui/core';
+import { makeStyles, Card, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import ProductImage from './product-components/ProductImage';
 import ProductContent from './product-components/ProductContent';
 import Divider from '../Divider';
 import ProductActions from './product-components/ProductActions';
+import AddButton from './product-components/AddButton';
+import ProductPrice from './product-components/ProductPrice';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -12,22 +14,6 @@ const useStyles = makeStyles(theme => ({
     width: '260px',
 
     boxShadow: `9px 7px 7px ${theme.palette.secondary.main}`,
-  },
-  addButton: {
-    marginLeft: '2.5%',
-    color: theme.palette.text.primary,
-
-    fontWeight: 'bold',
-
-    paddingTop: '5px',
-    paddingBottom: '5px',
-  },
-  price: {
-    width: '100%',
-    textAlign: 'right',
-    paddingRight: '2.5%',
-    marginTop: 'auto',
-    marginBottom: 'auto',
   },
 }));
 
@@ -44,15 +30,8 @@ export default function ProductCard({ product }) {
       <Divider width='90%' color={theme.palette.text.primary} />
 
       <ProductActions>
-        <Button className={classes.addButton} variant='contained' size='small' color='primary'>
-          Add
-        </Button>
-
-        <div className={classes.price}>
-          <Typography component='span' color='textPrimary'>
-            {product.price} lei
-          </Typography>
-        </div>
+        <AddButton />
+        <ProductPrice price={product.price} />
       </ProductActions>
     </Card>
   );
