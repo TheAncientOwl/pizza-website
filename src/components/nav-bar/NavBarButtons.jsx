@@ -1,4 +1,5 @@
 import { Button, ButtonGroup, makeStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 import NavBarDivider from './NavBarDivider';
 
@@ -14,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 /*TO DO: solve buttons overflow on mobile */
-export default function NavBarButtons() {
+export default function NavBarButtons({ onCategoryChange }) {
   const classes = useStyles();
 
   return (
@@ -22,7 +23,12 @@ export default function NavBarButtons() {
       <NavBarDivider />
       <ButtonGroup className={classes.buttonGroup}>
         {FoodData.map((category, index) => (
-          <Button className={classes.button} color='primary' variant='contained' key={index}>
+          <Button
+            className={classes.button}
+            color='primary'
+            variant='contained'
+            key={index}
+            onClick={() => onCategoryChange(category.categoryName, category.data)}>
             {category.categoryName}
           </Button>
         ))}
@@ -31,3 +37,7 @@ export default function NavBarButtons() {
     </>
   );
 }
+
+NavBarButtons.propTypes = {
+  onCategoryChange: PropTypes.func.isRequired,
+};

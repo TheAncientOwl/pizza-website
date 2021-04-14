@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 
 import BasketContainer from './basket/BasketContainer';
-import NavBarContainer from './nav-bar/NavBarContainer';
-import ProductsContainer from './products/ProductsContainer';
-
-import NavBarLogo from './nav-bar/NavBarLogo';
 import BasketToggleButton from './basket/BasketToggleButton';
+
+import NavBarContainer from './nav-bar/NavBarContainer';
+import NavBarLogo from './nav-bar/NavBarLogo';
 import NavBarButtons from './nav-bar/NavBarButtons';
 
+import ProductsContainer from './products/ProductsContainer';
 import ProductsTitleBar from './products/ProductsTitleBar';
+import ProductsGrid from './products/ProductsGrid';
 
 import FoodData from '../FoodData';
-import ProductsGrid from './products/ProductsGrid';
 
 const BASKET_WIDTH = 350;
 
@@ -25,22 +25,27 @@ const useStyles = makeStyles({
 
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [currentCategory] = useState(FoodData[0].categoryName);
-  const [currentProducts] = useState(FoodData[0].data);
+  const [currentTitle, setCurrentTitle] = useState(FoodData[0].categoryName);
+  const [currentProducts, setCurrentProducts] = useState(FoodData[0].data);
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
+
+  const handleCategoryChange = (title, products) => {
+    setCurrentTitle(title);
+    setCurrentProducts(products);
+  };
 
   return (
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
         <NavBarLogo />
-        <NavBarButtons />
+        <NavBarButtons onCategoryChange={handleCategoryChange} />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
       <ProductsContainer>
-        <ProductsTitleBar title={currentCategory} />
+        <ProductsTitleBar title={currentTitle} />
         <ProductsGrid products={currentProducts} />
       </ProductsContainer>
 
