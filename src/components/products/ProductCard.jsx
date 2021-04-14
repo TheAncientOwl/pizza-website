@@ -1,8 +1,9 @@
-import { makeStyles, Card, Typography, CardActions, Button, useTheme } from '@material-ui/core';
+import { makeStyles, Card, Typography, Button, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import ProductImage from './product-components/ProductImage';
 import ProductContent from './product-components/ProductContent';
 import Divider from '../Divider';
+import ProductActions from './product-components/ProductActions';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -11,17 +12,6 @@ const useStyles = makeStyles(theme => ({
     width: '260px',
 
     boxShadow: `9px 7px 7px ${theme.palette.secondary.main}`,
-  },
-  divider: {
-    width: '90%',
-    marginTop: '5px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-
-    borderStyle: 'solid',
-    borderWidth: '0.5px',
-    borderRadius: '2px',
-    borderColor: theme.palette.text.secondary,
   },
   addButton: {
     marginLeft: '2.5%',
@@ -36,6 +26,8 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     textAlign: 'right',
     paddingRight: '2.5%',
+    marginTop: 'auto',
+    marginBottom: 'auto',
   },
 }));
 
@@ -51,7 +43,7 @@ export default function ProductCard({ product }) {
 
       <Divider width='90%' color={theme.palette.text.primary} />
 
-      <CardActions className={classes.actions}>
+      <ProductActions>
         <Button className={classes.addButton} variant='contained' size='small' color='primary'>
           Add
         </Button>
@@ -61,7 +53,7 @@ export default function ProductCard({ product }) {
             {product.price} lei
           </Typography>
         </div>
-      </CardActions>
+      </ProductActions>
     </Card>
   );
 }
