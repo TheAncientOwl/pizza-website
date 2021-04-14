@@ -1,6 +1,6 @@
-import { makeStyles, Card, CardMedia, CardContent, Typography, CardActions, Button } from '@material-ui/core';
+import { makeStyles, Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
-//import Logo from '../../images/logo.jpg';
+import ProductImage from './ProductImage';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -9,10 +9,6 @@ const useStyles = makeStyles(theme => ({
     width: '260px',
 
     boxShadow: `9px 7px 7px ${theme.palette.secondary.main}`,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%',
   },
   content: {
     height: '130px',
@@ -54,7 +50,7 @@ export default function ProductCard({ product }) {
 
   return (
     <Card className={classes.card}>
-      <CardMedia className={classes.media} image={product.img} title={product.summary} />
+      <ProductImage src={product.img} alt={product.alt} />
 
       <CardContent className={classes.content}>
         <Typography variant='body1' color='textPrimary'>
