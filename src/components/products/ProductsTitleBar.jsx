@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
   },
   titleBox: {
     color: theme.palette.text.primary,
-    background: theme.overrides.MuiDrawer.paper.background,
+    background: theme.palette.background.default,
 
     paddingTop: '8px',
     paddingBottom: '8px',
@@ -22,21 +22,18 @@ const useStyles = makeStyles(theme => ({
 
     borderStyle: 'solid',
     borderRadius: '15px',
-    borderWidth: '3px',
-    borderColor: theme.palette.text.primary,
+    borderColor: theme.palette.background.default,
   },
   bar: {
     marginTop: 'auto',
     marginBottom: 'auto',
-    marginLeft: '10px',
-    marginRight: '10px',
 
     width: '100%',
 
     borderStyle: 'solid',
-    borderWidth: '0.5px',
+    borderWidth: '1px',
     borderRadius: '2px',
-    borderColor: theme.palette.text.primary,
+    borderColor: theme.palette.background.default,
   },
 }));
 
