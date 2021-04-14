@@ -74,12 +74,8 @@ export default function ProductCard({ product }) {
         </Button>
 
         <div className={classes.price}>
-          <Typography variant='body2' color='textSecondary'>
-            DE LA
-            <Typography component='span' color='textPrimary'>
-              {' '}
-              {product.price} lei
-            </Typography>
+          <Typography component='span' color='textPrimary'>
+            {product.price} lei
           </Typography>
         </div>
       </CardActions>
