@@ -24,5 +24,5 @@ export default function ProductPrice({ price }) {
 }
 
 ProductPrice.propTypes = {
-  price: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
 };
