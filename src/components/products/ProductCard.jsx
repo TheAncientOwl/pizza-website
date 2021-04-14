@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    background: theme.overrides.MuiDrawer.paper.background,
+    background: theme.palette.background.default,
 
     height: '330px',
     width: '260px',
@@ -48,10 +48,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function ProductCard({ product }) {
-  // const { img, alt, summary, details, price } = product;
-  const { summary } = product;
-  console.log(summary);
-
   const classes = useStyles();
 
   return (
