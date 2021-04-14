@@ -1,5 +1,6 @@
 import { makeStyles, Card, CardMedia, CardContent, Typography, CardActions, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
+//import Logo from '../../images/logo.jpg';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -44,6 +45,7 @@ const useStyles = makeStyles(theme => ({
   price: {
     width: '100%',
     textAlign: 'right',
+    paddingRight: '2.5%',
   },
 }));
 
