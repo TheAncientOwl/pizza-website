@@ -11,14 +11,6 @@ const useStyles = makeStyles(theme => ({
 
     boxShadow: `9px 7px 7px ${theme.palette.secondary.main}`,
   },
-  content: {
-    height: '130px',
-
-    paddingTop: '7px',
-    paddingLeft: '17px',
-    paddingRight: '17px',
-    paddingBottom: '10px',
-  },
   divider: {
     width: '90%',
     marginTop: '5px',
