@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, makeStyles } from '@material-ui/core';
+import { Button, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 import NavBarDivider from './NavBarDivider';
@@ -6,13 +6,19 @@ import NavBarDivider from './NavBarDivider';
 import FoodData from '../../FoodData';
 
 const useStyles = makeStyles(theme => ({
-  buttonGroup: {
-    overflow: 'auto',
-  },
   button: {
     background: theme.palette.background.default,
   },
   buttonSelect: {},
+  scrollMenu: {
+    overflow: 'auto',
+    whiteSpace: 'nowrap',
+    width: '100%',
+  },
+  scrollMenuItem: {
+    display: 'inline-block',
+    textAlign: 'center',
+  },
 }));
 
 /*TO DO: solve buttons overflow on mobile */
@@ -22,18 +28,20 @@ export default function NavBarButtons({ onCategoryChange, currentTitle }) {
   return (
     <>
       <NavBarDivider />
-      <ButtonGroup className={classes.buttonGroup}>
+      <div className={classes.scrollMenu}>
         {FoodData.map((category, index) => (
-          <Button
-            className={category.categoryName === currentTitle ? classes.buttonSelect : classes.button}
-            color='primary'
-            variant='contained'
-            key={index}
-            onClick={() => onCategoryChange(category.categoryName, category.data)}>
-            {category.categoryName}
-          </Button>
+          <div key={index} className={classes.scrollMenuItem}>
+            <Button
+              className={category.categoryName === currentTitle ? classes.buttonSelect : classes.button}
+              color='primary'
+              variant='contained'
+              key={index}
+              onClick={() => onCategoryChange(category.categoryName, category.data)}>
+              {category.categoryName}
+            </Button>
+          </div>
         ))}
-      </ButtonGroup>
+      </div>
       <NavBarDivider />
     </>
   );
