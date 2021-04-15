@@ -18,6 +18,8 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
 
     overflow: 'auto',
+
+    padding: '5px',
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
