@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 const useStyles = makeStyles(theme => ({
   container: {
     marginTop: '2vh',
-    marginBottom: '1vh',
+    marginBottom: '2vh',
 
     display: 'flex',
   },
