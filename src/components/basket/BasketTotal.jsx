@@ -1,6 +1,8 @@
 import { makeStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
+import OrderButton from './OrderButton';
+
 const useStyles = makeStyles(theme => ({
   total: {
     display: 'flex',
@@ -36,9 +38,14 @@ export default function BasketTotal({ products }) {
   );
 
   return (
-    <div className={classes.total}>
-      <Typography className={classes.totalText}>Total {total.toFixed(2)} lei</Typography>
-    </div>
+    total !== 0 && (
+      <>
+        <div className={classes.total}>
+          <Typography className={classes.totalText}>Total {total.toFixed(2)} lei</Typography>
+        </div>
+        <OrderButton />
+      </>
+    )
   );
 }
 
