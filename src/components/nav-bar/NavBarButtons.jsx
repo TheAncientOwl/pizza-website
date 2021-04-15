@@ -17,7 +17,7 @@ export default function NavBarButtons({ onCategoryChange, currentTitle }) {
   const classes = useStyles();
   const theme = useTheme();
 
-  const divider = <Divider color={theme.palette.text.primary} />;
+  const divider = <Divider color={theme.palette.text.secondary} />;
 
   return (
     <>
