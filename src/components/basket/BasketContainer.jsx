@@ -1,6 +1,8 @@
 import { makeStyles, Hidden, SwipeableDrawer, Drawer } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
+import BackgroundImage from '../../images/productsBackground.jpg';
+
 const useStyles = makeStyles(theme => ({
   container: {
     borderStyle: 'solid',
@@ -8,6 +10,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '15px',
 
     background: theme.palette.background.default,
+    backgroundImage: `url('${BackgroundImage}')`,
 
     margin: '2.5%',
 
