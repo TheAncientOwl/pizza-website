@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 
     fontStyle: 'italic',
     fontWeight: 'bold',
-    fontSize: '2em',
+    fontSize: '1.9em',
 
     paddingTop: '5px',
     paddingBottom: '5px',
