@@ -28,16 +28,18 @@ const useStyles = makeStyles({
 
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [currentTitle, setCurrentTitle] = useState(FoodData[0].categoryName);
-  const [currentProducts, setCurrentProducts] = useState(FoodData[0].data);
+  const [currentCategory, setCurrentCategory] = useState({
+    title: FoodData[0].categoryName,
+    products: FoodData[0].data,
+  });
   const [basketProducts] = useState([...FoodData[0].data, ...FoodData[1].data]);
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
 
   const handleCategoryChange = (title, products) => {
-    setCurrentTitle(title);
-    setCurrentProducts(products);
+    setCurrentCategory({ title, products });
+
     moveToTopAnchor();
   };
 
@@ -45,14 +47,14 @@ export default function Layout() {
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
         <NavBarTitle />
-        <NavBarButtons onCategoryChange={handleCategoryChange} currentTitle={currentTitle} />
+        <NavBarButtons onCategoryChange={handleCategoryChange} currentTitle={currentCategory.title} />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
 
       <ProductsContainer>
         <TopAnchor />
-        <ProductsTitleBar title={currentTitle} />
-        <ProductsGrid products={currentProducts} />
+        <ProductsTitleBar title={currentCategory.title} />
+        <ProductsGrid products={currentCategory.products} />
       </ProductsContainer>
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
