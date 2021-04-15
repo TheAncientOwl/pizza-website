@@ -1,5 +1,7 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import ProductDetails from './ProductDetails';
+import ProductSummary from './ProductSummary';
 
 const useStyles = makeStyles({
   content: {
@@ -17,13 +19,9 @@ export default function ProductContent({ summary, details }) {
 
   return (
     <div className={classes.content}>
-      <Typography variant='body1' color='textPrimary'>
-        {summary}
-      </Typography>
+      <ProductSummary summary={summary} />
 
-      <Typography variant='body2' color='textSecondary' paragraph>
-        {details}
-      </Typography>
+      <ProductDetails details={details} />
     </div>
   );
 }
