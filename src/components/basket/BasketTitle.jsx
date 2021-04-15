@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     margin: '10px',
   },
   titleBox: {
-    width: '20em',
+    minWidth: '120px',
     color: theme.palette.text.primary,
     background: theme.palette.background.default,
 
