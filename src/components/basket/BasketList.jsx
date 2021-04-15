@@ -48,7 +48,7 @@ export default function BasketList({ products }) {
 
             <ProductActions>
               <Counter count={product.count} />
-              <ProductPrice price={parseFloat(product.price) * product.count} />
+              <ProductPrice price={`${(parseFloat(product.price) * product.count).toFixed(2)}`} />
             </ProductActions>
           </ProductCard>
         </div>
