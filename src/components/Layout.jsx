@@ -18,6 +18,7 @@ import FoodData from '../FoodData';
 import BasketList from './basket/BasketList';
 import BasketTitle from './basket/BasketTitle';
 import BasketTotal from './basket/BasketTotal';
+import OrderButton from './basket/OrderButton';
 
 const BASKET_WIDTH = 350;
 
@@ -98,6 +99,7 @@ export default function Layout() {
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
         <BasketTitle />
         <BasketTotal products={basketProducts} />
+        <OrderButton />
         <BasketList
           products={basketProducts}
           onCounterIncrease={handleCounterIncrease}
