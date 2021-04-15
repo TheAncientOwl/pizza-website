@@ -15,7 +15,8 @@ import ProductsTitleBar from './products/ProductsTitleBar';
 import ProductsGrid from './products/ProductsGrid';
 
 import FoodData from '../FoodData';
-import BasketIcon from './basket/BasketIcon';
+import BasketList from './basket/BasketList';
+import BasketTitle from './basket/BasketTitle';
 
 const BASKET_WIDTH = 350;
 
@@ -29,6 +30,7 @@ export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [currentTitle, setCurrentTitle] = useState(FoodData[0].categoryName);
   const [currentProducts, setCurrentProducts] = useState(FoodData[0].data);
+  const [basketProducts] = useState([...FoodData[0].data, ...FoodData[1].data]);
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
@@ -54,7 +56,8 @@ export default function Layout() {
       </ProductsContainer>
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
-        <BasketIcon />
+        <BasketTitle />
+        <BasketList products={basketProducts} />
       </BasketContainer>
     </div>
   );
