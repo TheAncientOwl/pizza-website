@@ -44,10 +44,17 @@ export default function Layout() {
   };
 
   const handleProductAdd = product => {
-    if (basketProducts.includes(product)) return;
-    const newBasketProducts = [...basketProducts, product];
+    const index = basketProducts.findIndex(element => element.summary === product.summary);
 
-    setBasketProducts(newBasketProducts);
+    const getNewBasketProducts = () => {
+      if (index === -1) return [...basketProducts, { ...product, count: 1 }];
+
+      const newBasketProducts = [...basketProducts];
+      newBasketProducts[index].count++;
+      return newBasketProducts;
+    };
+
+    setBasketProducts(getNewBasketProducts());
   };
 
   return (
