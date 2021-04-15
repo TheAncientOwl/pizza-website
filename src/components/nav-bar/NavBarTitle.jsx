@@ -33,9 +33,7 @@ export default function NavBarTitle() {
 
   return (
     <div className={classes.container}>
-      <Typography component='div' className={classes.title}>
-        {TITLE}
-      </Typography>
+      <Typography className={classes.title}>{TITLE}</Typography>
     </div>
   );
 }
