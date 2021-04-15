@@ -28,7 +28,6 @@ const useStyles = makeStyles(theme => ({
 
 const TITLE = '* Ey Pizza Mama *';
 
-/*@deprecated */
 export default function NavBarTitle() {
   const classes = useStyles();
 
