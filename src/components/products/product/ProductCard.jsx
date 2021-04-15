@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    width: '260px',
+    width: '17em',
     background: theme.palette.background.default,
     boxShadow: props => (props.shadows ? `9px 7px 7px ${theme.palette.secondary.main}` : 'none'),
   },
