@@ -37,7 +37,7 @@ export default function BasketTotal({ products }) {
 
   return (
     <div className={classes.total}>
-      <Typography className={classes.totalText}>Total {total} lei</Typography>
+      <Typography className={classes.totalText}>Total {total.toFixed(2)} lei</Typography>
     </div>
   );
 }
