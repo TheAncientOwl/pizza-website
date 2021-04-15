@@ -6,7 +6,7 @@ import BackgroundImage from '../../images/productsBackground.jpg';
 const useStyles = makeStyles(theme => ({
   container: {
     borderStyle: 'solid',
-    borderColor: theme.palette.text.secondary,
+    borderColor: theme.palette.background.default,
     borderRadius: '15px',
 
     background: theme.palette.background.default,
