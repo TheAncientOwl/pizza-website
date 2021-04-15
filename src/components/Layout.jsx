@@ -61,7 +61,7 @@ export default function Layout() {
       <ProductsContainer>
         <TopAnchor />
         <ProductsTitleBar title={currentCategory.title} />
-        <ProductsGrid products={currentCategory.products} onItemAdd={handleProductAdd} />
+        <ProductsGrid products={currentCategory.products} onProductAdd={handleProductAdd} />
       </ProductsContainer>
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
