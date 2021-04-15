@@ -1,6 +1,12 @@
 import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
+  container: {
+    maxWidth: '20em',
+
+    marginTop: '1vh',
+    marginBottom: '1vh',
+  },
   title: {
     background: theme.palette.primary.main,
     color: theme.palette.text.primary,
@@ -8,9 +14,6 @@ const useStyles = makeStyles(theme => ({
     fontStyle: 'italic',
     fontWeight: 'bold',
     fontSize: '2em',
-
-    marginTop: '1vh',
-    marginBottom: '1vh',
 
     paddingTop: '5px',
     paddingBottom: '5px',
@@ -30,8 +33,10 @@ export default function NavBarTitle() {
   const classes = useStyles();
 
   return (
-    <Typography component='div' className={classes.title}>
-      {TITLE}
-    </Typography>
+    <div className={classes.container}>
+      <Typography component='div' className={classes.title}>
+        {TITLE}
+      </Typography>
+    </div>
   );
 }
