@@ -2,6 +2,18 @@ import { makeStyles, Hidden, SwipeableDrawer, Drawer } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
+  container: {
+    borderStyle: 'solid',
+    borderColor: theme.palette.text.secondary,
+    borderRadius: '15px',
+
+    background: theme.palette.background.default,
+
+    margin: '2.5%',
+
+    width: '95%',
+    height: '100%',
+  },
   drawer: {
     [theme.breakpoints.up('sm')]: {
       width: props => props.width,
@@ -29,13 +41,12 @@ export default function BasketContainer({ width, mobileOpen, onToggle, children 
           onClose={onToggle}
           classes={{ paper: classes.drawerPaper }}
           ModalProps={{ keepMounted: true }}>
-          {children}
+          <div className={classes.container}>{children}</div>
         </SwipeableDrawer>
       </Hidden>
-
       <Hidden xsDown implementation='css'>
         <Drawer anchor='right' classes={{ paper: classes.drawerPaper }} variant='permanent' open>
-          {children}
+          <div className={classes.container}>{children}</div>
         </Drawer>
       </Hidden>
     </nav>
