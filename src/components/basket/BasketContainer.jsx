@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawerPaper: {
     width: props => props.width,
+    maxWidth: '100vw',
   },
 }));
 
