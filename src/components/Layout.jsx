@@ -32,7 +32,7 @@ export default function Layout() {
     title: FoodData[0].categoryName,
     products: FoodData[0].data,
   });
-  const [basketProducts] = useState([...FoodData[0].data, ...FoodData[1].data]);
+  const [basketProducts, setBasketProducts] = useState([]);
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
@@ -41,6 +41,13 @@ export default function Layout() {
     setCurrentCategory({ title, products });
 
     moveToTopAnchor();
+  };
+
+  const handleProductAdd = product => {
+    if (basketProducts.includes(product)) return;
+    const newBasketProducts = [...basketProducts, product];
+
+    setBasketProducts(newBasketProducts);
   };
 
   return (
@@ -54,7 +61,7 @@ export default function Layout() {
       <ProductsContainer>
         <TopAnchor />
         <ProductsTitleBar title={currentCategory.title} />
-        <ProductsGrid products={currentCategory.products} />
+        <ProductsGrid products={currentCategory.products} onItemAdd={handleProductAdd} />
       </ProductsContainer>
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>

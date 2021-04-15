@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProductsGrid({ products }) {
+export default function ProductsGrid({ products, onProductAdd }) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -32,7 +32,7 @@ export default function ProductsGrid({ products }) {
             <Divider width='90%' color={theme.palette.text.primary} />
 
             <ProductActions>
-              <AddButton />
+              <AddButton onClick={() => onProductAdd(product)} />
               <ProductPrice price={product.price} />
             </ProductActions>
           </ProductCard>
@@ -44,4 +44,5 @@ export default function ProductsGrid({ products }) {
 
 ProductsGrid.propTypes = {
   products: PropTypes.array.isRequired,
+  onProductAdd: PropTypes.func.isRequired,
 };
