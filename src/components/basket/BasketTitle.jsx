@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '12px',
 
     textTransform: 'capitalize',
-    fontSize: '1.2rem',
+    fontSize: '1rem',
     fontStyle: 'italic',
     fontWeight: 'bold',
 
