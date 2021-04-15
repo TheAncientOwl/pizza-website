@@ -6,7 +6,7 @@ import BasketContainer from './basket/BasketContainer';
 import BasketToggleButton from './basket/BasketToggleButton';
 
 import NavBarContainer from './nav-bar/NavBarContainer';
-import NavBarLogo from './nav-bar/NavBarLogo';
+import NavBarTitle from './nav-bar/NavBarTitle';
 import NavBarButtons from './nav-bar/NavBarButtons';
 import { TopAnchor, moveToTopAnchor } from './TopAnchor';
 
@@ -41,7 +41,7 @@ export default function Layout() {
   return (
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
-        <NavBarLogo />
+        <NavBarTitle />
         <NavBarButtons onCategoryChange={handleCategoryChange} currentTitle={currentTitle} />
         <BasketToggleButton onClick={handleBasketToggle} />
       </NavBarContainer>
