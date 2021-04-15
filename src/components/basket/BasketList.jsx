@@ -8,6 +8,7 @@ import ProductPrice from '../products/product/ProductPrice';
 import Divider from '../Divider';
 import { makeStyles, useTheme } from '@material-ui/core';
 import ProductSummary from '../products/product/ProductSummary';
+import Counter from './Counter';
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -46,6 +47,7 @@ export default function BasketList({ products }) {
             <Divider width='90%' color={theme.palette.text.primary} />
 
             <ProductActions>
+              <Counter count={product.count} />
               <ProductPrice price={product.price} />
             </ProductActions>
           </ProductCard>
