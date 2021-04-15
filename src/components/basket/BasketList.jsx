@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function BasketList({ products }) {
+export default function BasketList({ products, onCounterIncrease, onCounterDecrease }) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -47,7 +47,11 @@ export default function BasketList({ products }) {
             <Divider width='90%' color={theme.palette.text.primary} />
 
             <ProductActions>
-              <Counter count={product.count} />
+              <Counter
+                count={product.count}
+                onIncrease={() => onCounterIncrease(product)}
+                onDecrease={() => onCounterDecrease(product)}
+              />
               <ProductPrice price={`${(parseFloat(product.price) * product.count).toFixed(2)}`} />
             </ProductActions>
           </ProductCard>
@@ -59,4 +63,6 @@ export default function BasketList({ products }) {
 
 BasketList.propTypes = {
   products: PropTypes.array.isRequired,
+  onCounterIncrease: PropTypes.func.isRequired,
+  onCounterDecrease: PropTypes.func.isRequired,
 };

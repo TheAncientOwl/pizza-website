@@ -57,6 +57,29 @@ export default function Layout() {
     setBasketProducts(getNewBasketProducts());
   };
 
+  const handleCounterIncrease = product => {
+    const index = basketProducts.findIndex(element => element.summary === product.summary);
+
+    const newBasketProducts = [...basketProducts];
+    newBasketProducts[index].count++;
+    setBasketProducts(newBasketProducts);
+  };
+
+  const handleCounterDecrease = product => {
+    const index = basketProducts.findIndex(element => element.summary === product.summary);
+
+    const getNewBasketProducts = () => {
+      const newBasketProducts = [...basketProducts];
+      newBasketProducts[index].count--;
+
+      if (newBasketProducts[index].count === 0) return basketProducts.filter(p => p !== product);
+
+      return newBasketProducts;
+    };
+
+    setBasketProducts(getNewBasketProducts());
+  };
+
   return (
     <div className={classes.root}>
       <NavBarContainer basketWidth={BASKET_WIDTH}>
@@ -73,7 +96,11 @@ export default function Layout() {
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
         <BasketTitle />
-        <BasketList products={basketProducts} />
+        <BasketList
+          products={basketProducts}
+          onCounterIncrease={handleCounterIncrease}
+          onCounterDecrease={handleCounterDecrease}
+        />
       </BasketContainer>
     </div>
   );
