@@ -15,6 +15,7 @@ import ProductsTitleBar from './products/ProductsTitleBar';
 import ProductsGrid from './products/ProductsGrid';
 
 import FoodData from '../FoodData';
+import BasketIcon from './basket/BasketIcon';
 
 const BASKET_WIDTH = 350;
 
@@ -53,7 +54,7 @@ export default function Layout() {
       </ProductsContainer>
 
       <BasketContainer width={BASKET_WIDTH} mobileOpen={mobileOpen} onToggle={handleBasketToggle}>
-        <div style={{ textAlign: 'center', marginTop: '10vh' }}>My Basket</div>
+        <BasketIcon />
       </BasketContainer>
     </div>
   );
