@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   productContainer: {
-    fontSize: '0.6em',
+    fontSize: '0.75em',
     borderColor: theme.palette.text.secondary,
 
     marginLeft: 'auto',
@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   summaryWrapper: {
     textAlign: 'center',
+    marginBottom: '3px',
   },
 }));
 
