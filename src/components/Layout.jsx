@@ -18,6 +18,7 @@ import FoodData from '../FoodData';
 import BasketList from './basket/BasketList';
 import BasketTitle from './basket/BasketTitle';
 import BasketTotal from './basket/BasketTotal';
+import { useBasketProducts, BASKET_ACTION } from './basket/useBasketProducts';
 
 const BASKET_WIDTH = 350;
 
@@ -33,53 +34,19 @@ export default function Layout() {
     title: FoodData[0].categoryName,
     products: FoodData[0].data,
   });
-  const [basketProducts, setBasketProducts] = useState([]);
+  const [basketProducts, basketDispatch] = useBasketProducts();
   const classes = useStyles();
 
   const handleBasketToggle = () => setMobileOpen(!mobileOpen);
 
   const handleCategoryChange = (title, products) => {
     setCurrentCategory({ title, products });
-
     moveToTopAnchor();
   };
 
-  const handleProductAdd = product => {
-    const index = basketProducts.findIndex(element => element.summary === product.summary);
-
-    const getNewBasketProducts = () => {
-      if (index === -1) return [...basketProducts, { ...product, count: 1 }];
-
-      const newBasketProducts = [...basketProducts];
-      newBasketProducts[index].count++;
-      return newBasketProducts;
-    };
-
-    setBasketProducts(getNewBasketProducts());
-  };
-
-  const handleCounterIncrease = product => {
-    const index = basketProducts.findIndex(element => element.summary === product.summary);
-
-    const newBasketProducts = [...basketProducts];
-    newBasketProducts[index].count++;
-    setBasketProducts(newBasketProducts);
-  };
-
-  const handleCounterDecrease = product => {
-    const index = basketProducts.findIndex(element => element.summary === product.summary);
-
-    const getNewBasketProducts = () => {
-      const newBasketProducts = [...basketProducts];
-      newBasketProducts[index].count--;
-
-      if (newBasketProducts[index].count === 0) return basketProducts.filter(p => p !== product);
-
-      return newBasketProducts;
-    };
-
-    setBasketProducts(getNewBasketProducts());
-  };
+  const handleProductAdd = product => basketDispatch({ type: BASKET_ACTION.ADD, product });
+  const handleCounterIncrease = product => basketDispatch({ type: BASKET_ACTION.INCREASE_COUNTER, product });
+  const handleCounterDecrease = product => basketDispatch({ type: BASKET_ACTION.DECREASE_COUNTER, product });
 
   return (
     <div className={classes.root}>
