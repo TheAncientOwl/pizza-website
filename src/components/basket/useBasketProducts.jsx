@@ -33,6 +33,9 @@ function reducer(products, action) {
     case BASKET_ACTION.DECREASE_COUNTER:
       if (products[index].count === 1) return products.filter(product => product !== newProduct);
       return getDecreased();
+
+    default:
+      throw new Error();
   }
 }
 
